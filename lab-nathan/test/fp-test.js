@@ -17,4 +17,18 @@ describe('fp', function() {
       expect(result).to.equal([1, 3]);
     });
   });
+
+  describe('#reduce()', function() {
+    it('should return 6.', function() {
+      let result = fp.reduce([1, 2, 3], (acc, cur) => acc + cur, 0);
+      expect(result).to.equal(6);
+    });
+  });
+
+  describe('#concat()', function() {
+    it('should return [1, 2, 3, 4, 5, 6].', function() {
+      let result = fp.concat([1, 2, 3], [4, 5, 6]);
+      expect(result).to.equal([1, 2, 3, 4, 5, 6]);
+    });
+  });
 });
