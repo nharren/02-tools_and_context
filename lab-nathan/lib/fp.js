@@ -14,3 +14,7 @@ fp.filter = (array, predicate) => {
 fp.reduce = (array, func, initialValue) => {
   return Array.prototype.reduce.call(array, func, initialValue);
 };
+
+fp.concat = (arrayA, arrayB) => {
+  return Array.prototype.concat.call(arrayA, arrayB);
+};
