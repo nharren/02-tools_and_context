@@ -13,8 +13,8 @@ describe('fp', function() {
 
   describe('#filter()', function() {
     it('should return 2.', function() {
-      let result = fp.filter([1, 2, 3], 2);
-      expect(result).to.equal([1, 3]);
+      let result = fp.filter([1, 2, 3], num => num !== 2);
+      expect(result).to.deep.equal([1, 3]);
     });
   });
 
