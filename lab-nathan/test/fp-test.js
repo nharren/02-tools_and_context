@@ -10,4 +10,11 @@ describe('fp', function() {
       expect(result).to.equal([2, 4, 6]);
     });
   });
+
+  describe('#filter()', function() {
+    it('should return 2.', function() {
+      let result = fp.filter([1, 2, 3], 2);
+      expect(result).to.equal([1, 3]);
+    });
+  });
 });
