@@ -31,4 +31,11 @@ describe('fp', function() {
       expect(result).to.equal([1, 2, 3, 4, 5, 6]);
     });
   });
+
+  describe('#splice()', function() {
+    it('should return [1, 2, 3, 7, 8, 9, 4, 5, 6].', function() {
+      let result = fp.splice([1, 2, 3, 4, 5, 6], 3, [7, 8, 9]);
+      expect(result).to.equal([1, 2, 3, 7, 8, 9, 4, 5, 6]);
+    });
+  });
 });
