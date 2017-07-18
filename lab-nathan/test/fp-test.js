@@ -34,7 +34,7 @@ describe('fp', function() {
 
   describe('#splice()', function() {
     it('should return [1, 2, 3, 7, 8, 9, 4, 5, 6].', function() {
-      let result = fp.splice([1, 2, 3, 4, 5, 6], 3, [7, 8, 9]);
+      let result = fp.splice([1, 2, 3, 4, 5, 6], 3, 0, [7, 8, 9]);
       expect(result).to.deep.equal([1, 2, 3, 7, 8, 9, 4, 5, 6]);
     });
   });

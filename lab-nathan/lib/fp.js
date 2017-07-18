@@ -18,3 +18,8 @@ fp.reduce = (array, func, initialValue) => {
 fp.concat = (arrayA, arrayB) => {
   return Array.prototype.concat.call(arrayA, arrayB);
 };
+
+fp.splice = (array, start, deleteCount, items) => {
+  Array.prototype.splice.call(array, start, deleteCount, ...items);
+  return array;
+};
