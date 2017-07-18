@@ -7,7 +7,7 @@ describe('fp', function() {
   describe('#map()', function() {
     it('should return an array of doubled values.', function() {
       let result = fp.map([1, 2, 3], num => num * 2);
-      expect(result).to.equal([2, 4, 6]);
+      expect(result).to.deep.equal([2, 4, 6]);
     });
   });
 
@@ -28,14 +28,14 @@ describe('fp', function() {
   describe('#concat()', function() {
     it('should return [1, 2, 3, 4, 5, 6].', function() {
       let result = fp.concat([1, 2, 3], [4, 5, 6]);
-      expect(result).to.equal([1, 2, 3, 4, 5, 6]);
+      expect(result).to.deep.equal([1, 2, 3, 4, 5, 6]);
     });
   });
 
   describe('#splice()', function() {
     it('should return [1, 2, 3, 7, 8, 9, 4, 5, 6].', function() {
       let result = fp.splice([1, 2, 3, 4, 5, 6], 3, [7, 8, 9]);
-      expect(result).to.equal([1, 2, 3, 7, 8, 9, 4, 5, 6]);
+      expect(result).to.deep.equal([1, 2, 3, 7, 8, 9, 4, 5, 6]);
     });
   });
 });
